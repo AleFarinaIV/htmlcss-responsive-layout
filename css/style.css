@@ -24,13 +24,13 @@ html {
         
     }
     body {
+        font-family: Arial, Helvetica, sans-serif;
         header {
             background-color: rgb(27, 115, 255);
             color: white;
             padding: 20px 0;
-            
             .container {
-                max-width: 100%;
+                width: 100%;
                 .row {
                     display: flex;
                     flex-wrap: wrap;
@@ -51,15 +51,20 @@ html {
             .first-container {
                 background-color: white;
                 width: 100%;
-                padding: 50px 0;
+                padding: 50px 15px;
                 .container {
-                    max-width: 90%;
+                    @media screen and (min-width: 992px) {
+                        width: 900px;
+                    }
                     margin: 0px auto;
                     .row {
                         display: flex;
                         flex-wrap: wrap;
                         .col-66 {
                             @media screen and (min-width: 768px) {
+                                width: calc(100% / 3 * 2);
+                            }
+                            @media screen and (min-width: 992px) {
                                 width: calc(100% / 3 * 2);
                             }
                             width: 100%;
@@ -86,7 +91,7 @@ html {
                                     font-size: 15px;
                                     font-weight: 700;
                                     margin: 30px 0;
-                                }
+                                    }
                                 .size {
                                     width: 100%;
                                 }
@@ -123,40 +128,48 @@ html {
             .second-container {
                 background-color: rgb(149 147 230);
                 width: 100%;
-                padding: 50px 0;
+                padding: 50px 15px;
                 .container {
-                    max-width: 90%;
                     margin: 0 auto;
                     .row {
                         display: flex;
                         flex-wrap: wrap;
                         .col-50 {
                             width: 100%;
+                            h2 {
+                                padding: 20px 0;
+                            }
+                            .size {
+                                width: 100%;
+                            }
+                            p {
+                                line-height: 25px;
+                            }
                             .content {
+                                @media screen and (min-width: 768px) {
+                                    h2 {
+                                        font-size: 70px;
+                                    }
+                                }
                                 margin: 10px;
                                 color: white;
-                                .size {
-                                    width: 100%;
-                                }
                                 .pb-30 {
                                     padding-bottom: 30px;
                                 }
-                                h2 {
-                                    padding: 20px 0;
-                                }
-                                p {
-                                    line-height: 25px;
-                                }
                             }
                             .white-bg {
+                                margin: 10px;
                                 background-color: white;
                                 color: black;
                                 border-radius: 40px;
                                 text-align: center;
                                 padding: 20px;
+                                p {
+                                    font-style: italic;
+                                }
                                 .fa-bg {
                                     background-color: rgb(149 147 230);
-                                    padding: 18px 15px;
+                                    padding: 20px 15px;
                                     border-radius: 50%;
                                     margin-top: 20px;
                                 }
@@ -206,14 +219,22 @@ html {
             .fourth-container {
                 background-color: rgb(149 147 230);
                 width: 100%;
-                padding: 50px 0;
+                padding: 50px 15px;
                 .container {
-                    max-width: 90%;
+                    @media screen and (min-width: 992px) {
+                        width: 900px;
+                    }
                     margin: 0 auto;
                     .row {
                         display: flex;
                         flex-wrap: wrap;
                         .col-33 {
+                            @media screen and (min-width: 768px) {
+                                width: 50%;
+                            }
+                            @media screen and (min-width: 992px) {
+                                width: calc(100% / 3);
+                            }
                             width: 100%;
                             .content {
                                 margin: 10px;
@@ -228,14 +249,19 @@ html {
             .fifth-container {
                 background-color: white;
                 width: 100%;
-                padding: 50px 0;
+                padding: 50px 15px;
                 .container {
-                    max-width: 90%;
+                    @media screen and (min-width: 992px) {
+                        width: 900px;
+                    }
                     margin: 0 auto;
                     .row {
                         display: flex;
                         flex-wrap: wrap;
                         .col-70 {
+                            @media screen and (min-width: 768px) {
+                                width: 50%;
+                            }
                             width: 100%;
                             .content {
                                 margin: 10px;
@@ -244,6 +270,9 @@ html {
                             }
                         }
                         .col-30 {
+                            @media screen and (min-width: 768px) {
+                                width: 50%;
+                            }
                             width: 100%;
                             .content {
                                 margin: 10px;
@@ -257,9 +286,8 @@ html {
             .sixth-container {
                 background-color: rgb(126, 129, 255);
                 width: 100%;
-                padding: 50px 0;
+                padding: 50px 15px;
                 .container {
-                    max-width: 90%;
                     margin: 0 auto;
                     .row {
                         display: flex;
@@ -268,8 +296,9 @@ html {
                             width: 100%;
                             .content{
                                 margin: 10px;
-                                height: 300px;
+                                padding: 0 70px;
                                 border: 1px solid black;
+                                text-align: center;
                             }
                         }
                     }
