@@ -4,25 +4,6 @@ html {
         padding: 0;
         box-sizing: border-box;
     }
-    /* @media screen and (min-width: 768px) {
-        main {
-            .first-container {
-                .container {
-                    .row {
-                        .col-66 {
-                            width: calc(100% / 3 * 2);
-                        }
-                        .col-33 {
-                            width: calc(100% / 3);
-                        }
-                    }
-                }
-            }
-        }
-    } */
-    @media screen and (min-width: 1200px) {
-        
-    }
     body {
         font-family: Arial, Helvetica, sans-serif;
         header {
@@ -30,7 +11,11 @@ html {
             color: white;
             padding: 20px 0;
             .container {
+                @media screen and (min-width: 992px) {
+                    width: 900px;
+                }
                 width: 100%;
+                margin: 0 auto;
                 .row {
                     display: flex;
                     flex-wrap: wrap;
@@ -38,9 +23,43 @@ html {
                     .col-50 {
                         width: 50%;
                         .content {
+                            @media screen and (min-width: 992px) {
+                                padding: 0 0 0 10px;
+                            }
                             padding: 0 30px;
                             .float-end {
                                 float: right;
+                            }
+                            .menu-mobile {
+                                @media screen and (min-width: 992px) {
+                                    display: none;
+                                }
+                                display: block;
+                            }
+                            .menu-desktop {
+                                @media screen and (min-width: 992px) {
+                                    display: block;
+                                }
+                                display: none;
+                                .horizontal-list {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    li {
+                                        display: inline-block;
+                                        margin: 0 10px;
+                                        font-size: 13px;
+                                        button {
+                                            color: black;
+                                            background-color: white;
+                                            border: none;
+                                            border-radius: 25px;
+                                            padding: 10px 15px;
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -137,6 +156,9 @@ html {
                     .row {
                         display: flex;
                         flex-wrap: wrap;
+                        @media screen and (min-width: 992px) {
+                            align-items: flex-end;
+                        }
                         .col-50 {
                             @media screen and (min-width: 992px) {
                                 width: 50%;
@@ -281,7 +303,7 @@ html {
             .fifth-container {
                 background-color: white;
                 width: 100%;
-                padding: 50px 15px;
+                padding: 50px 25px;
                 .container {
                     @media screen and (min-width: 992px) {
                         width: 900px;
@@ -294,32 +316,76 @@ html {
                             @media screen and (min-width: 768px) {
                                 width: 50%;
                             }
+                            @media screen and (min-width: 992px) {
+                                width: 70%;
+                            }
                             width: 100%;
                             .content {
                                 margin: 10px;
-                                height: 300px;
-                                border: 1px solid black;
+                                span {
+                                    color: rgb(149 147 230);
+                                    font-size: 40px;
+                                    font-weight: 700;
+                                }
+                                p {
+                                    font-size: 18px;
+                                    line-height: 50px;
+                                    margin-top: 25px;
+                                }
                             }
                         }
                         .col-30 {
                             @media screen and (min-width: 768px) {
                                 width: 50%;
                             }
+                            @media screen and (min-width: 992px) {
+                                width: 30%;
+                            }
                             width: 100%;
                             .content {
                                 margin: 10px;
-                                height: 300px;
-                                border: 1px solid black;
+                                position: relative;
+                                .fa-over {
+                                    position: absolute;
+                                    left: 95px;
+                                    font-size: 50px;
+                                    color: rgb(149 147 230);
+                                }
+                                .size {
+                                    width: 130px;
+                                    height: 130px;
+                                    object-fit: cover;
+                                    border-radius: 50%;
+                                }
+                                p {
+                                    color: rgb(149 147 230);
+                                    font-weight: 700;
+                                    font-size: 28px;
+                                    line-height: 35px;
+                                }
+                                button {
+                                    background-color: rgb(149 147 230);
+                                    border: none;
+                                    padding: 10px 40px;
+                                    border-radius: 30px;
+                                    color: white;
+                                    font-size: 10px;
+                                    font-weight: 700;
+                                    margin: 10px 0;
+                                }
                             }
                         }
                     }
                 }
             }
             .sixth-container {
-                background-color: rgb(126, 129, 255);
+                background-color: rgb(149 147 230);
                 width: 100%;
-                padding: 50px 15px;
+                padding: 40px 0;
                 .container {
+                    @media screen and (min-width: 992px) {
+                        width: 500px;
+                    }
                     margin: 0 auto;
                     .row {
                         display: flex;
@@ -328,9 +394,37 @@ html {
                             width: 100%;
                             .content{
                                 margin: 10px;
-                                padding: 0 70px;
-                                border: 1px solid black;
+                                padding: 0 85px;
                                 text-align: center;
+                                color: white;
+                                span {
+                                    opacity: 0.5;
+                                }
+                                h2 {
+                                    margin: 15px 0;
+                                }
+                                h1 {
+                                    color: #fdc15f;
+                                    font-size: 45px;
+                                }
+                                p {
+                                    margin: 15px 0;
+                                    font-size: 14px;
+                                    line-height: 25px;
+                                    a {
+                                        color: white;
+                                    }
+                                }
+                                button {
+                                    background-color: white;
+                                    border: none;
+                                    padding: 15px 70px;
+                                    border-radius: 30px;
+                                    color: rgb(149 147 230);
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                    margin: 10px 0;
+                                }
                             }
                         }
                     }
@@ -338,11 +432,13 @@ html {
             }
         }
         footer {
-            background-color: rgb(36, 36, 36);
+            background-color: rgb(50, 50, 50);
             color: white;
             padding:30px 0;
             .container {
-                max-width: 90%;
+                @media screen and (min-width: 992px) {
+                    width: 500px;
+                }
                 margin: 0 auto;
                 .row {
                     display: flex;
@@ -350,8 +446,14 @@ html {
                     .col {
                         width: 100%;
                         .content {
-                            height: 300px;
-                            border: 1px solid white;
+                            text-align: center;
+                            padding: 0 50px;
+                            p:nth-child(2) {
+                                margin-top: 50px;
+                                a{
+                                    color: rgb(149 147 230);
+                                }
+                            }
                         }
                     }
                 }
